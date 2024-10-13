@@ -1,0 +1,41 @@
+
+.modal {
+    position: fixed; /* Stay in place */
+    z-index: 2; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(40, 40, 53, 0.7); /* Black w/ opacity */
+  }
+  
+
+  .modal-content {
+    overflow-y: scroll;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid rgb(49,54,63);
+    width: 30rem;
+    max-height: 70%;
+    border-radius: 5px;
+    box-shadow: 5px 5px 30px rgb(49,54,63);
+    background-color: #242424;;
+  }
+  
+  /* The Close Button */
+  .close-btn {
+    color: #aaaaaa;
+    float: right;
+    transition:.5s;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close-btn:hover,
+  .close-btn:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }

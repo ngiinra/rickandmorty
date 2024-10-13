@@ -1,0 +1,22 @@
+body{
+  margin: 0;
+  padding: 0;
+  direction: rtl;
+  box-sizing: border-box;
+  font-family: calibri;
+  background-color: #242424;
+}
+button{
+  font: calibri;
+}
+ul{
+  margin: 0;
+}
+.container{
+  display: block;
+  margin: 1rem;
+  padding: 1rem;
+}
+.page-height{
+  min-height: 100vh;
+}

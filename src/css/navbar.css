@@ -1,0 +1,42 @@
+.navbar{
+    width:80%;
+    color: azure;
+    font-family: 'Segoe UI';
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+    margin:3rem auto;
+    border-radius: 8px;
+    padding: 8px 2rem;
+    background-color: rgb(49,54,63);
+}
+.navbar__search{
+    border-radius:8px;
+    background-color:rgb(117, 123, 135);
+    height: 2rem;
+    border:0;
+    color: azure;
+}
+.navbar button{
+    background-color: rgba(0, 0, 0, 0);
+    border:0;
+    padding: 0;
+}
+.navbar .navbar__heart{
+    color: red;
+    width: 2rem;
+}
+.badge{
+    border-radius: 40px;
+    background-color: red;
+    color: azure;
+    font-size: 10px;
+    margin-top: -5px;
+    margin-left: -40px;
+    min-width: 20px;
+    padding: 2px;
+    position: absolute;
+    text-align: center;
+    z-index: 1;
+}
