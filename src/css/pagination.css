@@ -1,0 +1,27 @@
+.activePageBtn{
+    border-radius: 8px;
+    border: 0;
+    cursor: pointer;
+    transition: border-color 0.25s;
+    padding: 0.7rem;
+}
+.pageBtn{
+    border-radius: 8px;
+    border: 0;
+    padding: 0.7rem;
+    background-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+}
+
+.pagination{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 1rem;
+    position: absolute;
+    bottom: 0;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+  }

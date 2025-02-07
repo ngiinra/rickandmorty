@@ -1,8 +1,12 @@
 import { ArrowUpCircleIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
+import { useMainCharacterEpisodes } from "../context/MainCharacterEpisodes";
+import { useMainCharacter } from "../context/MainCharacter";
 
-export default function ShownCharacter({characterData,episodeData,onLike,isCharacterLiked}){
-    if (characterData.length===0 && episodeData.length===0)
+export default function ShownCharacter({onLike,isCharacterLiked}){
+    const {mainCharacterEpisodes} = useMainCharacterEpisodes();
+    const {mainCharacter : characterData} = useMainCharacter(); 
+    if (characterData.length===0 && mainCharacterEpisodes.length===0)
         return <div className="no-character">Please select a character</div>
     return(
         <div>
@@ -26,12 +30,13 @@ export default function ShownCharacter({characterData,episodeData,onLike,isChara
                 </button>
                 }
             </div>
-            <ListOfEpisodes episodesData={episodeData}/>
+            <ListOfEpisodes/>
         </div>
     );
 }
 
-function ListOfEpisodes({episodesData}){
+function ListOfEpisodes(){
+    const {mainCharacterEpisodes:episodesData} =useMainCharacterEpisodes();
     const [direction, setDirection]= useState(true); // true means asc
     let sortedEpisodes=[];
 

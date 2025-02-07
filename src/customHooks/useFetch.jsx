@@ -1,10 +1,9 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { toast } from "react-hot-toast";
 
 export default function useGetApi(url,query){
     const [isLoading,setIsLoading]= useState(false);
-    const [allCharacters,setAllCharacters]=useState([]);
+    const [allData,setAllData]=useState({items:[], errorMessage:""});
 
     useEffect(()=>{
         //برای clean up function
@@ -15,13 +14,11 @@ export default function useGetApi(url,query){
             try{
                 setIsLoading(true);
                 const {data}= await axios.get(`${url+query}`,{signal});
-                setAllCharacters(data.results.slice(0,5));
+                setAllData({items:data.results, errorMessage:""});
 
             }catch(err){
-                console.log(err);
                 if (!axios.isCancel(err)){
-                    toast.error(await err.message);
-                    setAllCharacters([]);
+                    setAllData({items:[], errorMessage:await err.message});
                 }
             }finally{
                 setIsLoading(false);
@@ -34,5 +31,5 @@ export default function useGetApi(url,query){
         }
     },[query]);
 
-    return {isLoading, allCharacters};
+    return {isLoading, allData};
 }

@@ -1,6 +1,15 @@
+.character-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
 .character-list{
-    width:18rem;
+    flex-basis: 28%;
+    margin-top: 1rem;
     margin-bottom: 1rem;
+    height: 77vh;
+    position: relative;
 }
 
 .character{
@@ -59,7 +68,7 @@ background-color: red;
     background-color:rgb(49,54,63);
     border-radius: 10px;
     color: azure;
-    width: 40rem;
+    max-width: 40rem;
     margin: 1rem;
     overflow: hidden;
 }
@@ -112,12 +121,6 @@ background-color: red;
 }
 .episode-data{
     margin:1rem 2rem; 
-}
-.charcter-comp{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    direction: ltr;
 }
 
 .no-character{
